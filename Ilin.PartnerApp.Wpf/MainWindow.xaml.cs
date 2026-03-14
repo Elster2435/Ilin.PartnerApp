@@ -177,7 +177,12 @@ namespace Ilin.PartnerApp.Wpf
 
         private void ProductsButton_Click(object sender, RoutedEventArgs e)
         {
+            var window = new ProductsWindow
+            {
+                Owner = this
+            };
 
+            window.ShowDialog();
         }
 
         private void SalesButton_Click(object sender, RoutedEventArgs e)
