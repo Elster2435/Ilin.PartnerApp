@@ -164,5 +164,25 @@ namespace Ilin.PartnerApp.Wpf
                     MessageBoxImage.Error);
             }
         }
+
+        private void PartnerTypesButton_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new PartnerTypesWindow
+            {
+                Owner = this
+            };
+
+            window.ShowDialog();
+        }
+
+        private void ProductsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SalesButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

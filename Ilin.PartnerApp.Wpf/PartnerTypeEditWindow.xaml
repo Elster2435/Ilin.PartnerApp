@@ -1,0 +1,71 @@
+﻿<Window x:Class="Ilin.PartnerApp.Wpf.PartnerTypeEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ilin.PartnerApp.Wpf"
+        mc:Ignorable="d"
+        Title="Тип партнера" Height="220" Width="500"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0"
+                Padding="15"
+                BorderBrush="#D0D0D0"
+                BorderThickness="1"
+                CornerRadius="6">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0"
+                           VerticalAlignment="Center"
+                           Text="Название:"/>
+
+                <TextBox x:Name="NameTextBox"
+                         Grid.Column="1"
+                         Height="30"
+                         VerticalContentAlignment="Center"/>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="2"
+                Padding="10"
+                BorderBrush="#D0D0D0"
+                BorderThickness="1"
+                CornerRadius="6">
+            <DockPanel>
+                <TextBlock x:Name="StatusTextBlock"
+                           DockPanel.Dock="Left"
+                           VerticalAlignment="Center"
+                           Foreground="DimGray"
+                           Text=""/>
+
+                <StackPanel DockPanel.Dock="Right"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Right">
+                    <Button x:Name="SaveButton"
+                            Width="120"
+                            Height="35"
+                            Margin="0,0,10,0"
+                            Content="Сохранить"
+                            Click="SaveButton_Click"/>
+
+                    <Button x:Name="CancelButton"
+                            Width="120"
+                            Height="35"
+                            Content="Отмена"
+                            Click="CancelButton_Click"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+    </Grid>
+</Window>
