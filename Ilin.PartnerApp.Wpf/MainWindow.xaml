@@ -5,8 +5,227 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ilin.PartnerApp.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Управление партнерами" Height="700" Width="1200"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <Border Grid.Row="0"
+                Padding="10"
+                CornerRadius="6"
+                BorderBrush="#D0D0D0"
+                BorderThickness="1">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="AddPartnerButton"
+                        Width="140"
+                        Height="35"
+                        Margin="0,0,10,0"
+                        Content="Добавить партнера"
+                        Click="AddPartnerButton_Click"/>
+
+                <Button x:Name="EditPartnerButton"
+                        Width="160"
+                        Height="35"
+                        Margin="0,0,10,0"
+                        Content="Редактировать"
+                        Click="EditPartnerButton_Click"/>
+
+                <Button x:Name="DeletePartnerButton"
+                        Width="140"
+                        Height="35"
+                        Margin="0,0,10,0"
+                        Content="Удалить"
+                        Click="DeletePartnerButton_Click"/>
+
+                <Button x:Name="RefreshButton"
+                        Width="120"
+                        Height="35"
+                        Content="Обновить"
+                        Click="RefreshButton_Click"/>
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0"
+                    Padding="10"
+                    CornerRadius="6"
+                    BorderBrush="#D0D0D0"
+                    BorderThickness="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Список партнеров"
+                               FontSize="18"
+                               FontWeight="SemiBold"/>
+
+                    <ListBox x:Name="PartnersListBox"
+                             Grid.Row="2"
+                             BorderThickness="0"
+                             Background="Transparent"
+                             SelectionMode="Single"
+                             SelectionChanged="PartnersListBox_SelectionChanged"
+                             ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="Padding" Value="0"/>
+                                <Setter Property="Margin" Value="0,0,0,10"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListBoxItem">
+                                            <Border x:Name="ItemBorder"
+                                                    Background="{TemplateBinding Background}"
+                                                    CornerRadius="8">
+                                                <ContentPresenter/>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter TargetName="ItemBorder" Property="Background" Value="#F3F6FB"/>
+                                                </Trigger>
+                                                <Trigger Property="IsSelected" Value="True">
+                                                    <Setter TargetName="ItemBorder" Property="Background" Value="#E8F0FE"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border Padding="12"
+                                        CornerRadius="8"
+                                        BorderBrush="#D8D8D8"
+                                        BorderThickness="1"
+                                        Background="#FAFAFA">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock FontSize="16"
+                                           FontWeight="SemiBold"
+                                           Text="{Binding CompanyName}"/>
+
+                                            <TextBlock Margin="0,4,0,0"
+                                           Foreground="#555555"
+                                           Text="{Binding PartnerTypeName, StringFormat=Тип: {0}}"/>
+
+                                            <TextBlock Margin="0,2,0,0"
+                                           Foreground="#555555"
+                                           Text="{Binding DirectorFullname, StringFormat=Директор: {0}}"/>
+
+                                            <TextBlock Margin="0,2,0,0"
+                                           Foreground="#555555"
+                                           Text="{Binding Phone, StringFormat=Телефон: {0}}"/>
+
+                                            <TextBlock Margin="0,2,0,0"
+                                           Foreground="#555555"
+                                           Text="{Binding Email, StringFormat=Email: {0}}"/>
+
+                                            <TextBlock Margin="0,2,0,0"
+                                           Foreground="#555555"
+                                           Text="{Binding Rating, StringFormat=Рейтинг: {0}}"/>
+                                        </StackPanel>
+
+                                        <Border Grid.Column="1"
+                                                VerticalAlignment="Top"
+                                                Padding="10,6"
+                                                CornerRadius="14"
+                                                Background="#E8F0FE">
+                                            <TextBlock FontWeight="SemiBold"
+                                           Text="{Binding DiscountText}"/>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="2"
+                    Padding="10"
+                    CornerRadius="6"
+                    BorderBrush="#D0D0D0"
+                    BorderThickness="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="История реализации продукции"
+                               FontSize="18"
+                               FontWeight="SemiBold"/>
+
+                    <TextBlock x:Name="SelectedPartnerTextBlock"
+                               Grid.Row="2"
+                               FontSize="14"
+                               FontWeight="Medium"
+                               Text="Партнер не выбран"/>
+
+                    <DataGrid x:Name="SalesHistoryDataGrid"
+                              Grid.Row="4"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True"
+                              CanUserAddRows="False"
+                              CanUserDeleteRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID"
+                                                Binding="{Binding SaleId}"
+                                                Width="30"/>
+
+                            <DataGridTextColumn Header="Продукция"
+                                                Binding="{Binding ProductName}"
+                                                Width="140"/>
+
+                            <DataGridTextColumn Header="Количество"
+                                                Binding="{Binding Quantity}"
+                                                Width="100"/>
+
+                            <DataGridTextColumn Header="Дата продажи"
+                                                Binding="{Binding SaleDate}"
+                                                Width="100"/>
+
+                            <DataGridTextColumn Header="Цена"
+                                                Binding="{Binding UnitPrice}"
+                                                Width="100"/>
+
+                            <DataGridTextColumn Header="Сумма"
+                                                Binding="{Binding TotalAmount}"
+                                                Width="100"/>
+
+                            <DataGridTextColumn Header="Комментарий"
+                                                Binding="{Binding Comment}"
+                                                Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </Window>
