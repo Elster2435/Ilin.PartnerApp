@@ -241,7 +241,7 @@ namespace Ilin.Partner.Lib.Context
                 entity.HasOne(x => x.Partner)
                     .WithMany(x => x.PartnerProductSales)
                     .HasForeignKey(x => x.PartnerId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                    .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne(x => x.Product)
                     .WithMany(x => x.PartnerProductSales)
