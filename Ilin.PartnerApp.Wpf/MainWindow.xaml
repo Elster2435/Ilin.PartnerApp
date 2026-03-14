@@ -46,6 +46,27 @@
                         Height="35"
                         Content="Обновить"
                         Click="RefreshButton_Click"/>
+
+                <Button x:Name="PartnerTypesButton"
+                        Width="140"
+                        Height="35"
+                        Margin="207,0,10,0"
+                        Content="Типы партнеров"
+                        Click="PartnerTypesButton_Click"/>
+
+                <Button x:Name="ProductsButton"
+                        Width="100"
+                        Height="35"
+                        Margin="0,0,10,0"
+                        Content="Товары"
+                        Click="ProductsButton_Click"/>
+
+                <Button x:Name="SalesButton"
+                        Width="100"
+                        Height="35"
+                        Margin="0,0,10,0"
+                        Content="Продажи"
+                        Click="SalesButton_Click"/>
             </StackPanel>
         </Border>
 
