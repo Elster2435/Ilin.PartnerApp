@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="Ilin.PartnerApp.Lib/Ilin.PartnerApp.Lib.csproj" />
+  <Project Path="Ilin.PartnerApp.Wpf/Ilin.PartnerApp.Wpf.csproj" />
 </Solution>
