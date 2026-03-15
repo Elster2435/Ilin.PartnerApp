@@ -238,6 +238,15 @@ namespace Ilin.Partner.Lib.Context
                 entity.Property(x => x.Comment)
                     .HasColumnName("comment");
 
+                entity.Property(x => x.BasePrice)
+                    .HasColumnName("base_price")
+                    .HasPrecision(12, 2)
+                    .IsRequired();
+
+                entity.Property(x => x.DiscountPercent)
+                    .HasColumnName("discount_percent")
+                    .IsRequired();
+
                 entity.HasOne(x => x.Partner)
                     .WithMany(x => x.PartnerProductSales)
                     .HasForeignKey(x => x.PartnerId)
@@ -257,6 +266,7 @@ namespace Ilin.Partner.Lib.Context
                 {
                     table.HasCheckConstraint("ck_sales_quantity_positive", "quantity > 0");
                     table.HasCheckConstraint("ck_sales_unit_price_non_negative", "unit_price >= 0");
+                    table.HasCheckConstraint("ck_sales_discount_percent_range", "discount_percent >= 0 AND discount_percent <= 100");
                 });
             });
         }

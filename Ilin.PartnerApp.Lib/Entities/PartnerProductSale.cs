@@ -40,6 +40,14 @@ namespace Ilin.PartnerApp.Lib.Entities
         [Column("comment")]
         public string? Comment { get; set; }
 
+        [DataMember]
+        [Column("base_price")]
+        public decimal BasePrice { get; set; }
+
+        [DataMember]
+        [Column("discount_percent")]
+        public int DiscountPercent { get; set; }
+
         public Partner? Partner { get; set; }
 
         public Product? Product { get; set; }

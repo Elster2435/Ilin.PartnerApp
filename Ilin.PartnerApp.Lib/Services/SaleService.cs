@@ -31,10 +31,8 @@ namespace Ilin.PartnerApp.Lib.Services
                     ProductName = x.Product != null ? x.Product.Name : string.Empty,
                     Quantity = x.Quantity,
                     SaleDate = x.SaleDate,
-                    BasePrice = x.Product != null ? x.Product.Price : 0m,
-                    DiscountPercent = x.Product != null && x.Quantity > 0
-                        ? (int)Math.Round((1m - (x.UnitPrice / (x.Product.Price == 0 ? 1 : x.Product.Price))) * 100m)
-                        : 0,
+                    BasePrice = x.BasePrice,
+                    DiscountPercent = x.DiscountPercent,
                     UnitPrice = x.UnitPrice,
                     TotalAmount = x.TotalAmount,
                     Comment = x.Comment
@@ -141,6 +139,8 @@ namespace Ilin.PartnerApp.Lib.Services
                 ProductId = model.ProductId,
                 Quantity = model.Quantity,
                 SaleDate = model.SaleDate,
+                BasePrice = calculation.BasePrice,
+                DiscountPercent = calculation.DiscountPercent,
                 UnitPrice = calculation.UnitPrice,
                 Comment = NormalizeNullable(model.Comment)
             };
@@ -169,6 +169,8 @@ namespace Ilin.PartnerApp.Lib.Services
             entity.ProductId = model.ProductId;
             entity.Quantity = model.Quantity;
             entity.SaleDate = model.SaleDate;
+            entity.BasePrice = calculation.BasePrice;
+            entity.DiscountPercent = calculation.DiscountPercent;
             entity.UnitPrice = calculation.UnitPrice;
             entity.Comment = NormalizeNullable(model.Comment);
 
