@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Ilin.Partner.Lib.Context.IlinDbContext">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAQQAAAABAAAAAAAAAEAAAACEAAAAAAYAAAAQ=</HashCode>
+      <FileName>Context\IlinDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Entities.Partner">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAQCAAAAAAACAAAAAAAAAAACEiABAAIAAAACg=</HashCode>
+      <FileName>Entities\Partner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Entities.PartnerProductSale">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>NAACAAAEAAAUAAAAAAAAAAAAAAAAAAAAAAAAoAEAAAg=</HashCode>
+      <FileName>Entities\PartnerProductSale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Entities.PartnerType">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\PartnerType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Entities.Product">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQAQAAAAAAEAAAAAQAEAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Services.PartnerService" Collapsed="true">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAAAAAIAAAAABAEACIACIAgAEAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Services\PartnerService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Services.PartnerTypeService" Collapsed="true">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAiAAAAACABAAAAAACAAAAAAAAAAEAAAAAAAAIAgA=</HashCode>
+      <FileName>Services\PartnerTypeService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Services.ProductService" Collapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAIAIACABAAAAAAIAACASAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ProductService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Services.SaleService" Collapsed="true">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAIACACABAAIAAAAAAACAAAEAAAAAAQAAYgAAAA=</HashCode>
+      <FileName>Services\SaleService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.PartnerEditModel" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAACAAAAAAACAAAAAAAAAAAAEiABAAIAAAACg=</HashCode>
+      <FileName>Models\PartnerEditModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.PartnerTypeEditModel" Collapsed="true">
+    <Position X="9.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PartnerTypeEditModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.ProductEditModel" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQAQAAAAAAEAAAAAQAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ProductEditModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.SaleEditModel" Collapsed="true">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>NAACAAAEAAAUAAAAAAAAAAAAAAAAAAAAAAAAoAEAAAA=</HashCode>
+      <FileName>Models\SaleEditModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.PartnerListItemDTO" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAECAAAAAAAAAAAAAAAQAAAAUAAAAAIAAAAAg=</HashCode>
+      <FileName>Models\PartnerListItemDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.PartnerSaleHistoryItemDTO" Collapsed="true">
+    <Position X="11" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAEAAAQAAAAAAAAAAAAAAAAAAAAAAAAgAEIEAA=</HashCode>
+      <FileName>Models\PartnerSaleHistoryItemDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.PartnerTypeListItemDTO" Collapsed="true">
+    <Position X="11" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PartnerTypeListItemDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.ProductListItemDTO" Collapsed="true">
+    <Position X="11" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQAQAAAAAAEAAAAAQAEAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ProductListItemDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.SaleCalculationResultDTO" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\SaleCalculationResultDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.SaleListItemDTO" Collapsed="true">
+    <Position X="11" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>NAACAAAEAAAUAAAAAAAAAAAAAAAAAAAAAAAAoAkIAAA=</HashCode>
+      <FileName>Models\SaleListItemDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.SalePartnerLookupDTO" Collapsed="true">
+    <Position X="9.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SalePartnerLookupDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Models.SaleProductLookupDTO" Collapsed="true">
+    <Position X="7.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SaleProductLookupDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ilin.PartnerApp.Lib.Services.PartnerDiscountCalculator" Collapsed="true">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\PartnerDiscountCalculator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
