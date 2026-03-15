@@ -50,7 +50,7 @@
                 <Button x:Name="PartnerTypesButton"
                         Width="140"
                         Height="35"
-                        Margin="207,0,10,0"
+                        Margin="193,0,10,0"
                         Content="Типы партнеров"
                         Click="PartnerTypesButton_Click"/>
 
