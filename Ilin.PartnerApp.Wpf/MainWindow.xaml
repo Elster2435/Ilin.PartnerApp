@@ -41,16 +41,10 @@
                         Content="Удалить"
                         Click="DeletePartnerButton_Click"/>
 
-                <Button x:Name="RefreshButton"
-                        Width="120"
-                        Height="35"
-                        Content="Обновить"
-                        Click="RefreshButton_Click"/>
-
                 <Button x:Name="PartnerTypesButton"
                         Width="140"
                         Height="35"
-                        Margin="193,0,10,0"
+                        Margin="313,0,10,0"
                         Content="Типы партнеров"
                         Click="PartnerTypesButton_Click"/>
 

@@ -76,11 +76,6 @@ namespace Ilin.PartnerApp.Wpf
             }
         }
 
-        private async void RefreshButton_Click(object sender, RoutedEventArgs e)
-        {
-            await LoadPartnersAsync();
-        }
-
         private async void AddPartnerButton_Click(object sender, RoutedEventArgs e)
         {
             var editWindow = new PartnerEditWindow(_partnerService)

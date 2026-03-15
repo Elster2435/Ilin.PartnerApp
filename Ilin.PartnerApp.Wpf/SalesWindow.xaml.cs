@@ -42,11 +42,6 @@ namespace Ilin.PartnerApp.Wpf
             }
         }
 
-        private async void RefreshButton_Click(object sender, RoutedEventArgs e)
-        {
-            await LoadDataAsync();
-        }
-
         private async void AddButton_Click(object sender, RoutedEventArgs e)
         {
             var window = new SaleEditWindow(_saleService)
