@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Ilin.PartnerApp.Lib/Ilin.PartnerApp.Lib.csproj" />
+  <Project Path="Ilin.PartnerApp.Tests/Ilin.PartnerApp.Tests.csproj" Id="6f2094e9-7a8e-49a3-8585-4b208f1f246d" />
   <Project Path="Ilin.PartnerApp.Wpf/Ilin.PartnerApp.Wpf.csproj" />
 </Solution>
